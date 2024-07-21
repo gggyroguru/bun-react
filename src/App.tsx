@@ -18,7 +18,7 @@ const App = () => {
 
     const signUp = async () => {
         try {
-            const response:AxiosResponse = await axios.post('/api/user/signup', input);
+            const response:AxiosResponse = await axios.post('https://backdrops-api.onrender.com/api/user/signup', input);
             console.log(response.data);
         } catch (error: any) {
             toast.error(error.response.data.message);
